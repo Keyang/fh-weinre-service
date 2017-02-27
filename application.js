@@ -31,7 +31,7 @@
 // // Important that this is last!
 // app.use(mbaasExpress.errorHandler());
 
-var port = process.env.FH_PORT || process.env.OPENSHIFT_NODEJS_PORT || 8003;
+var port = process.env.FH_PORT || process.env.OPENSHIFT_NODEJS_PORT || 8001;
 var host = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 var spawn=require("child_process").spawn;
 spawn(__dirname+"/node_modules/.bin/weinre",["--httpPort",port,"--boundHost",host],{stdio:"inherit"});
